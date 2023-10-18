@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+    --mainColor: white;
+    --mainColorLight: #5767aa;
+    --secondaryColor: #db2b39;
+    --textColor: black;
+}
+
+// styling for header that wraps entire navbar
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 1rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+}
+
+// styling for nav that wraps the a links
+nav {
+    margin-left: auto;
+}
+
+// div that holds the image and the title
+.logo-div {
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+
+// styling for the siege image icon
+.logo-div-image {
+    width: 80px;
+}
+
+// styling for the siege title next to the image
+.logo-div-title {
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+// styling for the a tags inside of the navbar
+nav .links {
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+// hovering over the a tags in the navbar
+nav .links:hover {
+    color: var(--secondaryColor);
+}
+
+// the button for mobile responsive navbar
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+header div,
+nav {
+    display: flex;
+    align-items: center;
+}
+// responsive navbar
+@media only screen and (max-width: 1024px) {
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    // transition when icon is clicked
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--mainColor);
+        transition: 0.5s;
+        transform: translateY(-100vh);
+    }
+
+    header .responsive_nav {
+        transform: none;
+    }
+
+    // position the icon in sidebar
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    // a tag size in sidebar
+    nav a {
+        font-size: 1.5rem;
+    }
+}

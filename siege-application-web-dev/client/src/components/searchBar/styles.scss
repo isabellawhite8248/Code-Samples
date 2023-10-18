@@ -1,0 +1,41 @@
+// styling for the div that enclosed the search bar
+.search-bar-div {
+    width: 100%;
+}
+
+// styling for the magnifying glass icon in the search bar
+.search-bar-button {
+    position: relative;
+    left: 30px;
+    visibility: visible;
+    opacity: 1;
+}
+
+// styling for the search bar component
+.search-bar {
+    height: 2rem;
+    width: 15rem;
+    background-color: #e0e0e0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 10px 0px 10px 40px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    visibility: visible;
+    opacity: 1;
+}
+
+// removes the search bar from the screen
+@media only screen and (max-width: 1128px) {
+    .search-bar {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .search-bar-button {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

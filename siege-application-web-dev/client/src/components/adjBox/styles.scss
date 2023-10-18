@@ -1,0 +1,38 @@
+.box {
+    display: "flex";
+    border-radius: 45px;
+    align-items: "center";
+    justify-content: "center";
+    border: "solid 1px #ddd";
+    background: "black";
+    perspective: 1px;
+}
+.align-test{
+    display:flex;
+    flex-direction: row;
+}
+.header{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(221, 221, 218);
+    padding-right: 5px;
+}
+.adjbox-inner{
+    display: inline-block;
+    margin-top: 5px;
+}
+.adjbox-outer{
+    overflow: hidden;
+}
+.icon{
+    width: 15px;
+    height: 15px;
+}
+.resize-handle{
+    position: absolute; 
+    user-select: none; 
+    width: 20px; 
+    height: 20px; 
+    right: 4px; 
+    top: 7px; 
+    cursor: ne-resize;
+}
